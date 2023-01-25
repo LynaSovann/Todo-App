@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+$yellow: #FFE9A0;
+$green: #367E18;
+$orange: #F57328;
+$red: #CC3636;
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexBetween{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    background-color: $yellow;
+    width: 100%;
+    main {
+        width: 900px;
+        max-width: 900px;
+        margin: auto;
+        // background-color: gray;
+        padding: 20px;
+        header {
+            @include flexCenter();
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                color: $orange;
+            }
+            form {
+                margin-top: 20px;
+                width: 100%;
+                // background-color: red;
+                @include flexBetween();
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    height: 40px;
+                    outline: none;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: solid $orange 3px;
+                    color: $orange;
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+                }
+                button {
+                    font-size: 16px;
+                    height: 40px;
+                    padding: 10px;
+                    background-color: $orange;
+                    border: none;
+                    outline: none;
+                    color: $yellow;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+        }
+        .container {
+            margin-top: 20px;
+            width: 100%;
+            // background-color: gray;
+            .head-container {
+                @include flexCenter();
+                h1 {
+                    font-size: 20px;
+                    color: $orange;
+                }
+            }
+            .list-tasks {
+                // background-color: red;
+                margin: 20px 0;
+                li {
+                    list-style: none;
+                    // background-color: red;
+                    .tasks {
+                        background-color: $orange;
+                        margin: 2px 0;
+                        height: 50px;
+                        padding: 0 10px;
+                        @include flexBetween();
+                        p {
+                            color: $yellow;
+                            font-size: 16px;
+                        }
+                        .btn {
+                            height: 100%;
+                            // background-color: red;
+                            @include flexCenter();
+                            button {
+                                font-size: 14px;
+                                height: 30px;
+                                margin-left: 10px;
+                                padding: 0 5px;
+                                cursor: pointer;
+                            }
+                            button:nth-child(1) {
+                                background-color: $green;
+                                border: $green;
+                                outline: $green;
+                                color: $yellow;
+                            }
+                            button:nth-child(2) {
+                                background-color: $red;
+                                border: $red;
+                                outline: $red;
+                                color: $yellow;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .delete-all {
+            height: 40px;
+            // background-color: red;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            button {
+                height: 100%;
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                background-color: $red;
+                color: $yellow;
+                cursor: pointer;
+            }
+        }
+        .bottom-container {
+            @include flexBetween();
+            p {
+                font-size: 16px;
+                color: $orange;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        main {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 400px) {
+    body {
+        main {
+            .container {
+                .list-tasks {
+                    li {
+                        .tasks {
+                            height: auto;
+                            flex-direction: column;
+                            padding: 10px 0;
+                            p {
+                                margin: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+            }
+            .delete-all {
+                justify-content: center;
+            }
+        }
+    }
+}

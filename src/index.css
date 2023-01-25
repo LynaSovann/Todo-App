@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #FFE9A0;
+  width: 100%;
+}
+body main {
+  width: 900px;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+body main header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main header a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #F57328;
+}
+body main header form {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main header form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  height: 40px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid #F57328 3px;
+  color: #F57328;
+}
+body main header form input::first-letter {
+  text-transform: capitalize;
+}
+body main header form button {
+  font-size: 16px;
+  height: 40px;
+  padding: 10px;
+  background-color: #F57328;
+  border: none;
+  outline: none;
+  color: #FFE9A0;
+  cursor: pointer;
+}
+body main header form button:hover {
+  opacity: 0.8;
+}
+body main .container {
+  margin-top: 20px;
+  width: 100%;
+}
+body main .container .head-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .container .head-container h1 {
+  font-size: 20px;
+  color: #F57328;
+}
+body main .container .list-tasks {
+  margin: 20px 0;
+}
+body main .container .list-tasks li {
+  list-style: none;
+}
+body main .container .list-tasks li .tasks {
+  background-color: #F57328;
+  margin: 2px 0;
+  height: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .container .list-tasks li .tasks p {
+  color: #FFE9A0;
+  font-size: 16px;
+}
+body main .container .list-tasks li .tasks .btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .container .list-tasks li .tasks .btn button {
+  font-size: 14px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 0 5px;
+  cursor: pointer;
+}
+body main .container .list-tasks li .tasks .btn button:nth-child(1) {
+  background-color: #367E18;
+  border: #367E18;
+  outline: #367E18;
+  color: #FFE9A0;
+}
+body main .container .list-tasks li .tasks .btn button:nth-child(2) {
+  background-color: #CC3636;
+  border: #CC3636;
+  outline: #CC3636;
+  color: #FFE9A0;
+}
+body main .delete-all {
+  height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+body main .delete-all button {
+  height: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: #CC3636;
+  color: #FFE9A0;
+  cursor: pointer;
+}
+body main .bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .bottom-container p {
+  font-size: 16px;
+  color: #F57328;
+}
+
+@media (max-width: 900px) {
+  body main {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  body main .container .list-tasks li .tasks {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  body main .container .list-tasks li .tasks p {
+    margin: 10px;
+  }
+  body main .bottom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+  body main .delete-all {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=index.css.map */
